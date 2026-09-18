@@ -41,4 +41,5 @@ int main()
 	cout << "| note: X - fiction; Y - Educational literature; C - Referance literature;|\n";
 	cout << "--------------------------------------------------------------------------";
 	return 0;
+
 }
