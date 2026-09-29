@@ -24,6 +24,7 @@ DataEnt:
     system("cls");
 
     // Cords check
+    
     if (x >= Ox[1] || x <= Ox[2] || y >= Cs || y <= Oy[2]) {
         cout << "Point length in function area" << endl;
         cout << "Point cords: " << "(" << x << " ; " << y << ")";
