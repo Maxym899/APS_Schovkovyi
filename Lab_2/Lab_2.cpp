@@ -21,22 +21,24 @@ DataEnt:
     cout << "Enter y: ";
     cin >> y;
 
+    system("cls");
+
     // Cords check
-    if (x >= Ox[1] || x <= Ox[2] || y >= Cs || y <= Oy[2]) { 
+    if (x >= Ox[1] || x <= Ox[2] || y >= Cs || y <= Oy[2]) {
         cout << "Point length in function area" << endl;
-        cout << "Point cords: " << "(" << x << y << ")";
+        cout << "Point cords: " << "(" << x << " ; " << y << ")";
     }
     else if (x >= Ox[1] || x <= Cs || y >= Oy[1] || y <= Oy[2]) {
         cout << "Point length in function area" << endl;
-        cout << "Point cords: " << "(" << x << y << ")";
+        cout << "Point cords: " << "(" << x << " ; " << y << ")";
     }
     else if (x >= Cs || x < Ox[2] || y >= Oy[1] || y <= Cs) {
         cout << " Point in`t in function area" << endl;
-        cout << "Point cords: " << "(" << x << y << ")";
+        cout << "Point cords: " << "(" << x << " ; " << y << ")";
     }
     else {
         cout << "Point isn`t in function area" << endl;
-        cout << "Point cords: " << "(" << x << y << ")";
+        cout << "Point cords: " << "(" << x << " ; " << y << ")";
     }
     cout << "\nDo you want to calculate cordinates again ?"<< endl;
     cin >> ans;
