@@ -30,6 +30,7 @@ int main()
 	n = 0;
 	k1 = 1;
 
+	//sec calculating with perciption
 	while (true) {
 		double c = pow(n = n + 1, 2);
 		double z = pow(n + 2, 2);
@@ -41,6 +42,7 @@ int main()
 			break;
 		}
 		sumP = sumP + term;
+
 		k1 = -k1;
 		n = n + 1;
 	}
