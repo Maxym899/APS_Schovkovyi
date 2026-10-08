@@ -1,51 +1,33 @@
 #include <iostream>
-#include <cmath>
 #include <iomanip>
-#include <string>
+#include <cmath>
+
 using namespace std;
 
-int main()
-{
-	// variable input
-	double n = 0;
-    double term;
-	double sum = 0;
-	short k1 = 1;
-	const double eps = 0.000001;
+int main() {
+    double sum = 0.0;
+    double term; 
+    int n = 0; 
+    const double eps = 0.000001;
 
-	for (n; n <= 9; n++) {     // first calculating
-		double c = pow(n = n + 1, 2);
-		double z = pow(n + 2, 2);
-		double d = 1 - c / z;
+    cout << fixed << setprecision(8);
 
-		term = k1 * d;
-		sum = sum + term;
-		k1 = -k1;
-	}
-	cout << fixed << setprecision(6);
-	cout << " tenth num is: " << term << "\n";
-	cout << "sum is: " << sum;
+    while (true) {
+        term = pow(-1.0, n) * (2.0 * n + 3.0) / pow(n + 2.0, 2); // member calc.
 
-	float sumP = 0;
-	n = 0;
-	k1 = 1;
+        //perciption checking
+        if (abs(term) < eps) {
+            cout << "summa with perciption = " << sum << endl;
+            break;
+        }
+        sum += term;
 
-	//sec calculating with perciption
-	while (true) {
-		double c = pow(n = n + 1, 2);
-		double z = pow(n + 2, 2);
-		double d = 1 - c / z;
+        // Output the sum of the first 10 terms
+        if (n == 9) {
+            cout << "sum of 10 firsst nums = " << sum << endl;
+        }
+        n++;
+    }
 
-		term = k1 * d;
-
-		if (abs(term) < eps) {
-			break;
-		}
-		sumP = sumP + term;
-
-		k1 = -k1;
-		n = n + 1;
-	}
-	cout << "\n sum with precision " << eps << " is: " << sumP << "\n";
-	return 0;
+    return 0;
 }
