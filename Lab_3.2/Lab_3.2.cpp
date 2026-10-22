@@ -30,7 +30,7 @@ int main()
 
         cout << '\n' << "Amount of pares: " << p <<'\n';
 
-    } while (p <= 0); 
+    } while (p <= 0);
 
     return 0;
 }
