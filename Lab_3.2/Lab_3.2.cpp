@@ -1,47 +1,36 @@
 #include <iostream>
 #include <cmath>
-#include <time.h>
+#include <ctime>
 #include <string>
 using namespace std;
 
 int main()
 {
-    int Ar[100];
-    int CL = 0; // current length
-    int MS = 0; // max sum
-    char ans;
+    // 11
+
+    short Ar[100];
+    short p = 0;
+
     srand(time(0));
-
-    // Array data inp
-    cout << "Your array data: " << "\n";
-    for (int i = 0; i < 100; i++) {
-        Ar[i] = rand() % 201 - 100;
-        cout << Ar[i] << " ";
-    }
-
-    cout << "\n" << "If u want to cover array enter: 1, else enter anything: " << '\n';
-    cin >> ans;
-    if (ans == '1') {
+    do {
+        p = 0;
         system("cls");
-    }
-
-    for (int i = 0; i < 100; i++) {
-        if (Ar[i] >= 0) {
-            CL++; // finding out length
+        // array initialization
+        for (short i = 0; i < 100; i++) {
+            Ar[i] = rand() % 101 - 50;
+            cout << Ar[i] << " ";
         }
-        else {
-            if (CL >= 5) {
-                int indx = i - CL;
-                cout << "\n" << "sequence more than 5 nums bigger or eqals to 0 starts from index: " << indx;
+
+        // pares finding
+        for (short i = 0; i < 99; i++) {
+            if (Ar[i] == -Ar[i + 1] && Ar[i] != 0) {
+                p++;
             }
-            CL = 0;
         }
 
-    }
-    // chek in case last num would be positive
-    if (CL >= 5) {
-        cout <<"\n" << "sequence more than 5 nums bigger or eqals to 0 starts from index: " << 100 - CL<< "\n";
-    }
+        cout << '\n' << "Amount of pares: " << p <<'\n';
+
+    } while (p <= 0);
 
     return 0;
 }
