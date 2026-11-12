@@ -64,5 +64,6 @@ int main() {
 	cout << "Primechanie: D - \"Dinamo\", S - \"Spartak\", H - \"Shahter\"\n";
 	cout << "--------------------------------------------------------------------------\n";
 
+
 	return 0;
 }
